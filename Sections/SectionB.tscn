@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dmnxnom2rvtj7"]
+
+[ext_resource type="PackedScene" uid="uid://bhr5txrko78a5" path="res://basic_platform.tscn" id="1_ah7ds"]
+[ext_resource type="PackedScene" uid="uid://cuv4chf6mnse3" path="res://LaunchPad.tscn" id="2_0iesy"]
+[ext_resource type="PackedScene" uid="uid://q75mn0c8f3v3" path="res://ReboundWall.tscn" id="3_e8v0c"]
+
+[node name="SectionB" type="Node2D" unique_id=1704354465]
+
+[node name="EntryPoint" type="Marker2D" parent="." unique_id=524075934]
+position = Vector2(270, 850)
+
+[node name="ExitPoint" type="Marker2D" parent="." unique_id=626342914]
+position = Vector2(270, -50)
+
+[node name="BasicPlatform" parent="." unique_id=1588023451 instance=ExtResource("1_ah7ds")]
+position = Vector2(276, 856)
+
+[node name="LaunchPad" parent="." unique_id=1701797640 instance=ExtResource("2_0iesy")]
+position = Vector2(546, 432)
+
+[node name="ReboundWall" parent="." unique_id=340124925 instance=ExtResource("3_e8v0c")]
+position = Vector2(122, 184)
+
+[node name="BasicPlatform2" parent="." unique_id=1852623727 instance=ExtResource("1_ah7ds")]
+position = Vector2(266, -36)

@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b5xw36ckbvmm7"]
+
+[ext_resource type="PackedScene" uid="uid://bhr5txrko78a5" path="res://basic_platform.tscn" id="1_nv71v"]
+[ext_resource type="PackedScene" uid="uid://cuv4chf6mnse3" path="res://LaunchPad.tscn" id="2_2x4lw"]
+
+[node name="SectionA" type="Node2D" unique_id=1516777512]
+
+[node name="EntryPoint" type="Marker2D" parent="." unique_id=1532874855]
+position = Vector2(270, 850)
+
+[node name="ExitPoint" type="Marker2D" parent="." unique_id=844260172]
+position = Vector2(270, -50)
+
+[node name="BasicPlatform" parent="." unique_id=1588023451 instance=ExtResource("1_nv71v")]
+position = Vector2(274, 840)
+
+[node name="BasicPlatform2" parent="." unique_id=2136364254 instance=ExtResource("1_nv71v")]
+position = Vector2(140, 296)
+
+[node name="LaunchPad" parent="." unique_id=1701797640 instance=ExtResource("2_2x4lw")]
+position = Vector2(522, 500)
+
+[node name="BasicPlatform3" parent="." unique_id=396637622 instance=ExtResource("1_nv71v")]
+position = Vector2(270, -58)

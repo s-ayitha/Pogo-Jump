@@ -1,19 +1,21 @@
 [gd_scene format=3 uid="uid://bt2s5c8x2ou24"]
 
 [ext_resource type="PackedScene" uid="uid://bhr5txrko78a5" path="res://basic_platform.tscn" id="1_aakl2"]
-[ext_resource type="Script" uid="uid://poa7b65j4m3j" path="res://course.gd" id="1_f2x1d"]
+[ext_resource type="Script" uid="uid://d4ade2tujhn6j" path="res://course_generator.gd" id="1_b6xkg"]
 [ext_resource type="Texture2D" uid="uid://dyk3kg4qsrto" path="res://Assets/Screenshot_2026-11-15_154212-removebg-preview.png" id="2_b6xkg"]
 [ext_resource type="PackedScene" uid="uid://cuv4chf6mnse3" path="res://LaunchPad.tscn" id="2_j3vcq"]
 [ext_resource type="PackedScene" uid="uid://q75mn0c8f3v3" path="res://ReboundWall.tscn" id="3_f2x1d"]
 [ext_resource type="PackedScene" uid="uid://c61ym1ml5muiv" path="res://player.tscn" id="4_j3vcq"]
 [ext_resource type="Script" uid="uid://dbcf2lcqjlmvt" path="res://game_camera.gd" id="5_f2x1d"]
 [ext_resource type="Texture2D" uid="uid://busb3kbrf46vk" path="res://Assets/image.png" id="7_4fvvt"]
+[ext_resource type="PackedScene" uid="uid://b5xw36ckbvmm7" path="res://Sections/SectionA.tscn" id="9_clivm"]
+[ext_resource type="PackedScene" uid="uid://dmnxnom2rvtj7" path="res://Sections/SectionB.tscn" id="10_lwp7x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_780je"]
 size = Vector2(180, 24)
 
 [node name="Course" type="Node2D" unique_id=459153672]
-script = ExtResource("1_f2x1d")
+script = ExtResource("1_b6xkg")
 
 [node name="StartPlatform" type="StaticBody2D" parent="." unique_id=1140865560]
 position = Vector2(270, 850)
@@ -27,16 +29,13 @@ scale = Vector2(0.4, 0.4)
 texture = ExtResource("2_b6xkg")
 
 [node name="BasicPlatform" parent="." unique_id=1588023451 instance=ExtResource("1_aakl2")]
-position = Vector2(390, 720)
+position = Vector2(500, 720)
 
 [node name="BasicPlatform2" parent="." unique_id=2049888549 instance=ExtResource("1_aakl2")]
-position = Vector2(150, 590)
+position = Vector2(70, 590)
 
 [node name="LaunchPad" parent="." unique_id=1701797640 instance=ExtResource("2_j3vcq")]
 position = Vector2(390, 430)
-
-[node name="LaunchPad2" parent="." unique_id=1382890419 instance=ExtResource("2_j3vcq")]
-position = Vector2(150, 280)
 
 [node name="BasicPlatform3" parent="." unique_id=1477146260 instance=ExtResource("1_aakl2")]
 position = Vector2(390, 120)
@@ -71,8 +70,13 @@ texture = ExtResource("7_4fvvt")
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=27310755]
 z_index = -1
-position = Vector2(330.00012, -1709.875)
-scale = Vector2(2.043333, 38.101486)
+position = Vector2(423.5001, -1709.875)
+scale = Vector2(3.051667, 38.101486)
 texture = ExtResource("7_4fvvt")
 region_enabled = true
 region_rect = Rect2(64.5, 39.25, 600, 101)
+
+[node name="SectionA" parent="." unique_id=1516777512 instance=ExtResource("9_clivm")]
+
+[node name="SectionB" parent="." unique_id=1704354465 instance=ExtResource("10_lwp7x")]
+position = Vector2(0, -900)
