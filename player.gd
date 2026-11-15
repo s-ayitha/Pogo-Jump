@@ -4,7 +4,7 @@ signal crashed
 
 @export var gravity_strength: float = 1200.0
 @export var bounce_speed: float = 1000.0
-@export var turn_speed_degrees: float = 360.0
+@export var turn_speed_degrees: float = 180.0
 @export var max_landing_tilt_degrees: float = 70.0
 
 @onready var pogo_sprite: Sprite2D = $Sprite2D
