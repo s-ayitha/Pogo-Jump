@@ -1,9 +1,7 @@
 [gd_scene format=3 uid="uid://bj1c1l65y6rnm"]
 
-[node name="Node2D" type="Node2D" unique_id=459153672]
+[ext_resource type="PackedScene" uid="uid://bt2s5c8x2ou24" path="res://Course.tscn" id="1_glv2v"]
 
-[node name="Player" type="CharacterBody2D" parent="." unique_id=120438795]
+[node name="Node2D2" type="Node2D" unique_id=459153672]
 
-[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=317599393]
-
-[node name="Course" type="Node2D" parent="." unique_id=5147052]
+[node name="Course" parent="." unique_id=359203889 instance=ExtResource("1_glv2v")]

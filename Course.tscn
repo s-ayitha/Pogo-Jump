@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bhr5txrko78a5" path="res://basic_platform.tscn" id="1_aakl2"]
 [ext_resource type="PackedScene" uid="uid://cuv4chf6mnse3" path="res://LaunchPad.tscn" id="2_j3vcq"]
 [ext_resource type="PackedScene" uid="uid://q75mn0c8f3v3" path="res://ReboundWall.tscn" id="3_f2x1d"]
+[ext_resource type="PackedScene" uid="uid://c61ym1ml5muiv" path="res://player.tscn" id="4_j3vcq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_780je"]
 size = Vector2(180, 24)
@@ -51,4 +52,7 @@ position = Vector2(150, -120)
 position = Vector2(300, -360)
 
 [node name="StartMarker" type="Marker2D" parent="." unique_id=583580122]
+position = Vector2(270, 810)
+
+[node name="Player" parent="." unique_id=1286877843 instance=ExtResource("4_j3vcq")]
 position = Vector2(270, 810)
