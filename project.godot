@@ -11,11 +11,14 @@ config_version=5
 [application]
 
 config/name="Pogo Jump"
+run/main_scene="uid://bj1c1l65y6rnm"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
 
 [display]
 
+window/size/viewport_width=540
+window/size/viewport_height=960
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
