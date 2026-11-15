@@ -2,6 +2,10 @@ extends CharacterBody2D
 
 signal crashed
 
+signal landed(surface: Node2D)
+
+@export var launch_pad_boost: float = 150.0
+
 @export var gravity_strength: float = 1200.0
 @export var bounce_speed: float = 1000.0
 @export var turn_speed_degrees: float = 180.0
@@ -34,8 +38,24 @@ func _physics_process(delta: float) -> void:
 
 		velocity = Vector2.UP.rotated(pogo_sprite.rotation) * bounce_speed
 
+		var surface := _get_landing_surface()
+		if surface != null:
+			if surface.is_in_group("launch_pad"):
+				velocity.y -= launch_pad_boost
+
+			print(surface.name, " upward launch speed: ", roundi(-velocity.y))
+			landed.emit(surface)
+			
 func respawn_at(world_position: Vector2) -> void:
 	global_position = world_position
 	velocity = Vector2.ZERO
 	pogo_sprite.rotation = 0.0
 	has_crashed = false
+	
+func _get_landing_surface() -> Node2D:
+	for index in get_slide_collision_count():
+		var collision := get_slide_collision(index)
+		if collision.get_angle(up_direction) <= floor_max_angle:
+			return collision.get_collider() as Node2D
+
+	return null

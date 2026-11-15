@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bt2s5c8x2ou24"]
 
 [ext_resource type="PackedScene" uid="uid://bhr5txrko78a5" path="res://basic_platform.tscn" id="1_aakl2"]
+[ext_resource type="Script" uid="uid://poa7b65j4m3j" path="res://course.gd" id="1_f2x1d"]
 [ext_resource type="PackedScene" uid="uid://cuv4chf6mnse3" path="res://LaunchPad.tscn" id="2_j3vcq"]
 [ext_resource type="PackedScene" uid="uid://q75mn0c8f3v3" path="res://ReboundWall.tscn" id="3_f2x1d"]
 [ext_resource type="PackedScene" uid="uid://c61ym1ml5muiv" path="res://player.tscn" id="4_j3vcq"]
@@ -10,6 +11,7 @@
 size = Vector2(180, 24)
 
 [node name="Course" type="Node2D" unique_id=459153672]
+script = ExtResource("1_f2x1d")
 
 [node name="StartPlatform" type="StaticBody2D" parent="." unique_id=1140865560]
 position = Vector2(270, 850)
