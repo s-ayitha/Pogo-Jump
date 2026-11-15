@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c73pejnfsepwi" path="res://player.gd" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://dwfpy5dxe8jts" path="res://Assets/png-clipart-happy-wheels-video-game-pogo-sticks-pogo-stick-man-wikia-wheelchair-miscellaneous-game-thumbnail-removebg-preview.png" id="2_onrkg"]
+[ext_resource type="AudioStream" uid="uid://chlsdrxh2i18v" path="res://Assets/pogo_boing.wav" id="3_i3pqv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v3g5s"]
 size = Vector2(32, 48)
@@ -15,3 +16,7 @@ shape = SubResource("RectangleShape2D_v3g5s")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=901740052]
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_onrkg")
+
+[node name="BounceSound" type="AudioStreamPlayer" parent="." unique_id=1038947188]
+stream = ExtResource("3_i3pqv")
+volume_db = 15.0

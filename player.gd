@@ -14,6 +14,8 @@ signal wall_rebounded(wall: Node2D)
 
 @onready var pogo_sprite: Sprite2D = $Sprite2D
 
+@onready var bounce_sound: AudioStreamPlayer = $BounceSound
+
 var has_crashed := false
 
 func _physics_process(delta: float) -> void:
@@ -53,6 +55,7 @@ func _physics_process(delta: float) -> void:
 			return
 
 		velocity = Vector2.UP.rotated(pogo_sprite.rotation) * bounce_speed
+		bounce_sound.play()
 
 		var surface := _get_landing_surface()
 		if surface != null:

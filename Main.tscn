@@ -1,7 +1,10 @@
 [gd_scene format=3 uid="uid://bj1c1l65y6rnm"]
 
 [ext_resource type="PackedScene" uid="uid://bt2s5c8x2ou24" path="res://Course.tscn" id="1_glv2v"]
+[ext_resource type="PackedScene" uid="uid://d1j8enajq788f" path="res://score_hud.tscn" id="2_uu6xs"]
 
 [node name="Node2D2" type="Node2D" unique_id=459153672]
 
 [node name="Course" parent="." unique_id=359203889 instance=ExtResource("1_glv2v")]
+
+[node name="ScoreHUD" parent="." unique_id=2103653463 instance=ExtResource("2_uu6xs")]
