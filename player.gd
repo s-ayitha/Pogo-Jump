@@ -4,6 +4,7 @@ signal crashed
 
 signal landed(surface: Node2D)
 
+signal wall_rebounded(wall: Node2D)
 @export var launch_pad_boost: float = 150.0
 
 @export var gravity_strength: float = 1200.0
@@ -27,7 +28,22 @@ func _physics_process(delta: float) -> void:
 	)
 
 	velocity.y += gravity_strength * delta
+	var incoming_velocity := velocity
+	
 	move_and_slide()
+
+	if is_on_wall_only():
+		for index in get_slide_collision_count():
+			var collision := get_slide_collision(index)
+			var wall := collision.get_collider() as Node2D
+			if wall == null or not wall.is_in_group("rebound_wall"):
+				continue
+
+			var normal := collision.get_normal()
+			if absf(normal.x) > absf(normal.y) and incoming_velocity.x * normal.x < 0.0:
+				velocity = Vector2(-incoming_velocity.x, incoming_velocity.y)
+				wall_rebounded.emit(wall)
+				break
 
 	if is_on_floor():
 		if absf(pogo_sprite.rotation_degrees) > max_landing_tilt_degrees:
