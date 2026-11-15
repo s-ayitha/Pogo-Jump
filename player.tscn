@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c61ym1ml5muiv"]
 
-[ext_resource type="Texture2D" uid="uid://dg1p57y8x0bxw" path="res://icon.svg" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://c73pejnfsepwi" path="res://player.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://dwfpy5dxe8jts" path="res://Assets/png-clipart-happy-wheels-video-game-pogo-sticks-pogo-stick-man-wikia-wheelchair-miscellaneous-game-thumbnail-removebg-preview.png" id="2_onrkg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v3g5s"]
 size = Vector2(32, 48)
@@ -13,4 +13,5 @@ script = ExtResource("1_onrkg")
 shape = SubResource("RectangleShape2D_v3g5s")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=901740052]
-texture = ExtResource("1_4flbx")
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_onrkg")
