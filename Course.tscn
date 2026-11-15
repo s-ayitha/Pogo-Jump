@@ -70,8 +70,24 @@ texture = ExtResource("7_4fvvt")
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=27310755]
 z_index = -1
-position = Vector2(423.5001, -1709.875)
-scale = Vector2(3.051667, 38.101486)
+position = Vector2(423.5001, -6773.375)
+scale = Vector2(3.051667, 138.3688)
+texture = ExtResource("7_4fvvt")
+region_enabled = true
+region_rect = Rect2(64.5, 39.25, 600, 101)
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1413464361]
+z_index = -1
+position = Vector2(1965, -6115.9375)
+scale = Vector2(3.051667, 149.92201)
+texture = ExtResource("7_4fvvt")
+region_enabled = true
+region_rect = Rect2(64.5, 39.25, 600, 101)
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=589033577]
+z_index = -1
+position = Vector2(-1280, -5583.9375)
+scale = Vector2(3.051667, 140.06064)
 texture = ExtResource("7_4fvvt")
 region_enabled = true
 region_rect = Rect2(64.5, 39.25, 600, 101)
