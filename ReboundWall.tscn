@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://q75mn0c8f3v3"]
 
+[ext_resource type="Texture2D" uid="uid://dhlsej5hv4ctu" path="res://Assets/Screenshot_2026-11-15_154601-removebg-preview.png" id="1_naw30"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j3apr"]
 size = Vector2(24, 240)
 
@@ -8,9 +10,7 @@ size = Vector2(24, 240)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1441317191]
 shape = SubResource("RectangleShape2D_j3apr")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1588086833]
-offset_left = -12.0
-offset_top = -120.0
-offset_right = 12.0
-offset_bottom = 120.0
-color = Color(1, 1, 0.08235294, 1)
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1148384757]
+rotation = 1.5707964
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("1_naw30")
