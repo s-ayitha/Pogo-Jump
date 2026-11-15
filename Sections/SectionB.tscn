@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://q75mn0c8f3v3" path="res://ReboundWall.tscn" id="3_e8v0c"]
 
 [node name="SectionB" type="Node2D" unique_id=1704354465]
+position = Vector2(0, -700)
 
 [node name="EntryPoint" type="Marker2D" parent="." unique_id=524075934]
 position = Vector2(270, 850)
@@ -13,7 +14,7 @@ position = Vector2(270, 850)
 position = Vector2(270, -50)
 
 [node name="BasicPlatform" parent="." unique_id=1588023451 instance=ExtResource("1_ah7ds")]
-position = Vector2(276, 856)
+position = Vector2(276, 730)
 
 [node name="LaunchPad" parent="." unique_id=1701797640 instance=ExtResource("2_0iesy")]
 position = Vector2(546, 432)
